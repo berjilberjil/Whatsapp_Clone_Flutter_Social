@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsin/screens/model/appbar.dart';
 import 'package:whatsin/screens/call.dart';
 import 'package:whatsin/screens/community.dart';
 import 'package:whatsin/screens/home.dart';
-import 'package:whatsin/screens/status.dart';
-
+import 'package:whatsin/screens/updates.dart';
 
 class BottomNavBarWidget extends StatefulWidget {
   const BottomNavBarWidget({super.key});
@@ -21,7 +19,6 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       backgroundColor: Colors.white,
       body: PageView(
         controller: pageController,
@@ -32,7 +29,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
         },
         children: const [
           HomeScreen(),
-          StatusScreen(),
+          UpdatesScreen(),
           CommunityScreen(),
           CallScreen(),
         ],
@@ -49,11 +46,11 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.circle_sharp),
-              label: "Status",
+              label: "Updates",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.group),
-              label: "Groups",
+              label: "Communities",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.call),
