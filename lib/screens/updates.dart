@@ -85,15 +85,14 @@ class UpdatesScreen extends StatelessWidget {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(35),
-                          border: Border.all(
-                            color: const Color.fromARGB(255, 11, 222, 0),
-                            width: 3,
-                          )
-                        ),
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(35),
+                            border: Border.all(
+                              color: const Color.fromARGB(255, 11, 222, 0),
+                              width: 3,
+                            )),
                         child: const CircleAvatar(
-                          radius: 30,
+                          radius: 28,
                           backgroundImage: AssetImage("assets/images/1.jpg"),
                         ),
                       ),
@@ -110,7 +109,200 @@ class UpdatesScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),              ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(35),
+                            border: Border.all(
+                              color: const Color.fromARGB(255, 11, 222, 0),
+                              width: 3,
+                            )),
+                        child: const CircleAvatar(
+                          radius: 28,
+                          backgroundImage: AssetImage("assets/images/1.jpg"),
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(5.0),
+                        child: Text(
+                          "Cathrine",
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(35),
+                            border: Border.all(
+                              color: const Color.fromARGB(255, 11, 222, 0),
+                              width: 3,
+                            )),
+                        child: const CircleAvatar(
+                          radius: 28,
+                          backgroundImage: AssetImage("assets/images/1.jpg"),
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(5.0),
+                        child: Text(
+                          "Cathrine",
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(35),
+                            border: Border.all(
+                              color: const Color.fromARGB(255, 11, 222, 0),
+                              width: 3,
+                            )),
+                        child: const CircleAvatar(
+                          radius: 28,
+                          backgroundImage: AssetImage("assets/images/1.jpg"),
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(5.0),
+                        child: Text(
+                          "Cathrine",
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(35),
+                            border: Border.all(
+                              color: const Color.fromARGB(255, 11, 222, 0),
+                              width: 3,
+                            )),
+                        child: const CircleAvatar(
+                          radius: 28,
+                          backgroundImage: AssetImage("assets/images/1.jpg"),
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(5.0),
+                        child: Text(
+                          "Cathrine",
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(35),
+                            border: Border.all(
+                              color: const Color.fromARGB(255, 11, 222, 0),
+                              width: 3,
+                            )),
+                        child: const CircleAvatar(
+                          radius: 28,
+                          backgroundImage: AssetImage("assets/images/1.jpg"),
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(5.0),
+                        child: Text(
+                          "Cathrine",
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Divider(
+            color: Colors.white,
+            thickness: 0.1,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
+            child: Flexible(
+              child: Row(
+                children: [
+                  Text(
+                    "Channels",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400),
+                  ),
+                  Spacer(),
+                  Row(
+                    children: [
+                      Text(
+                        "Explore",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 0, 255, 13),
+                            fontSize: 10,
+                            fontWeight: FontWeight.w300),
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        color: Color.fromARGB(255, 68, 255, 0),
+                        size: 15,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],
