@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:badges/badges.dart' as custom_badge;
 
 class UpdatesScreen extends StatelessWidget {
   const UpdatesScreen({super.key});
@@ -37,244 +38,92 @@ class UpdatesScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 15),
-            child: Text(
+      body: Padding(
+        padding: const EdgeInsets.only(left: 15, right: 15),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
               "Status",
               style: TextStyle(
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontSize: 20,
                   fontWeight: FontWeight.w500),
             ),
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage("assets/images/1.jpg"),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Text(
-                          "My status",
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(right: 15),
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundImage: AssetImage("assets/images/1.jpg"),
                           ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(35),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 11, 222, 0),
-                              width: 3,
-                            )),
-                        child: const CircleAvatar(
-                          radius: 28,
-                          backgroundImage: AssetImage("assets/images/1.jpg"),
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Text(
-                          "Cathrine",
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white,
+                          Padding(
+                            padding: EdgeInsets.all(5.0),
+                            child: Text(
+                              "My status",
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(35),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 11, 222, 0),
-                              width: 3,
-                            )),
-                        child: const CircleAvatar(
-                          radius: 28,
-                          backgroundImage: AssetImage("assets/images/1.jpg"),
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Text(
-                          "Cathrine",
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10),
+                      child: Column(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(35),
+                                border: Border.all(
+                                  color: const Color.fromARGB(255, 11, 222, 0),
+                                  width: 3,
+                                )),
+                            child: const CircleAvatar(
+                              radius: 28,
+                              backgroundImage:
+                                  AssetImage("assets/images/1.jpg"),
+                            ),
                           ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(35),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 11, 222, 0),
-                              width: 3,
-                            )),
-                        child: const CircleAvatar(
-                          radius: 28,
-                          backgroundImage: AssetImage("assets/images/1.jpg"),
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Text(
-                          "Cathrine",
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white,
+                          const Padding(
+                            padding: EdgeInsets.all(5.0),
+                            child: Text(
+                              "Cathrine",
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                    // Add other status widgets as necessary
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(35),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 11, 222, 0),
-                              width: 3,
-                            )),
-                        child: const CircleAvatar(
-                          radius: 28,
-                          backgroundImage: AssetImage("assets/images/1.jpg"),
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Text(
-                          "Cathrine",
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(35),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 11, 222, 0),
-                              width: 3,
-                            )),
-                        child: const CircleAvatar(
-                          radius: 28,
-                          backgroundImage: AssetImage("assets/images/1.jpg"),
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Text(
-                          "Cathrine",
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(35),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 11, 222, 0),
-                              width: 3,
-                            )),
-                        child: const CircleAvatar(
-                          radius: 28,
-                          backgroundImage: AssetImage("assets/images/1.jpg"),
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Text(
-                          "Cathrine",
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+              ),
             ),
-          ),
-          const Divider(
-            color: Colors.white,
-            thickness: 0.1,
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 15),
-            child: Flexible(
+            const Divider(
+              color: Colors.white,
+              thickness: 0.1,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 10, bottom: 15),
               child: Row(
                 children: [
                   Text(
@@ -304,8 +153,110 @@ class UpdatesScreen extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ],
+            // const Row(
+            //   mainAxisAlignment: MainAxisAlignment.start,
+            //   children: [
+            //     CircleAvatar(
+            //       radius: 25,
+            //     ),
+            //     Padding(
+            //       padding: EdgeInsets.only(left: 15),
+            //       child: Column(
+            //         mainAxisAlignment: MainAxisAlignment.start,
+            //         crossAxisAlignment: CrossAxisAlignment.start,
+            //         children: [
+            //           Text(
+            //             "Mint",
+            //             style: TextStyle(
+            //                 color: Colors.white, fontWeight: FontWeight.w400),
+            //           ),
+            //           Text(
+            //             "Message",
+            //             style: TextStyle(
+            //                 color: Colors.white, fontWeight: FontWeight.w200),
+            //           ),
+            //         ],
+            //       ),
+            //     ),
+            //     Spacer(),
+            //     Column(
+            //         mainAxisAlignment: MainAxisAlignment.start,
+            //         crossAxisAlignment: CrossAxisAlignment.end,
+            //         children: [
+            //           Text(
+            //             "Yesterday",
+            //             style: TextStyle(color: Colors.green,
+            //                 fontWeight: FontWeight.w500,
+            //                 fontSize: 10,
+            //                 ),
+
+            //           ),
+            //           custom_badge.Badge(
+            //               badgeContent: Text("2"),
+            //               badgeStyle: custom_badge.BadgeStyle(
+            //                 badgeColor: Colors.green,
+            //                 padding: EdgeInsets.all(5),
+            //               )),
+            //         ])
+            //   ],
+            // ),
+            Expanded(child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (BuildContext context, int index) {
+                return const Padding(
+                  padding: EdgeInsets.only(top: 20),
+                  child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                  CircleAvatar(
+                    radius: 25,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 15),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Mint",
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.w400),
+                        ),
+                        Text(
+                          "Message",
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.w200),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Spacer(),
+                  Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          "Yesterday",
+                          style: TextStyle(color: Colors.green,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 10,
+                              ),
+                  
+                        ),
+                        custom_badge.Badge(
+                            badgeContent: Text("2"),
+                            badgeStyle: custom_badge.BadgeStyle(
+                              badgeColor: Colors.green,
+                              padding: EdgeInsets.all(5),
+                            )),
+                      ])
+                                ],
+                              ),
+                );
+              },
+            ),)
+          ],
+        ),
       ),
     );
   }
