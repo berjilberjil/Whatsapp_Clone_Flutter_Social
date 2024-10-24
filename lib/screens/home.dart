@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:whatsin/screens/archived.dart';
+import 'package:whatsin/screens/mychatscreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
- 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color.fromARGB(255, 0, 255, 8),
+        onPressed: () {},
+        child: const Icon(
+          Icons.add_comment,
+          color: Colors.black,
+        ),
+      ),
       backgroundColor: const Color(0xFF07141C),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(110),
@@ -62,33 +70,70 @@ class HomeScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: GestureDetector(
-                  onTap: () {
-                    Get.to(const ArchivedChat());
-                  },
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.archive,
-                        color: Colors.white,
-                      ),
-                      SizedBox(width: 15),
-                      Text(
-                        "Archived",
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w300,
+                  child: InkWell(
+                    onTap: () => const ArchivedChat(),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.archive,
                           color: Colors.white,
                         ),
-                      ),
-                      Spacer(),
-                      Text(
-                        "10",
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w300,
-                          color: Color.fromARGB(255, 81, 208, 3),
+                        SizedBox(width: 15),
+                        Text(
+                          "Archived",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                          ),
                         ),
+                        Spacer(),
+                        Text(
+                          "10",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w300,
+                            color: Color.fromARGB(255, 81, 208, 3),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  Get.to(const Mychatscreen());
+                },
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        radius: 25,
+                      ),
+                      SizedBox(width: 15),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Berjil (You)",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "Message",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w300),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -114,7 +159,7 @@ class HomeScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Berjil (You)",
+                              "Cathrine",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 15,
@@ -139,31 +184,6 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-
-      // bottomNavigationBar: BottomAppBar(
-      //   color: const Color(0xFF07141C),
-      //   child: Row(
-      //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-      //     children: [
-      //       IconButton(
-      //         icon: const Icon(Icons.chat, color: Colors.white),
-      //         onPressed: () {},
-      //       ),
-      //       IconButton(
-      //         icon: const Icon(Icons.circle_sharp, color: Colors.white),
-      //         onPressed: () {},
-      //       ),
-      //       IconButton(
-      //         icon: const Icon(Icons.group, color: Colors.white),
-      //         onPressed: () {},
-      //       ),
-      //       IconButton(
-      //         icon: const Icon(Icons.call, color: Colors.white),
-      //         onPressed: () {},
-      //       ),
-      //     ],
-      //   ),
-      // ),
     );
   }
 }

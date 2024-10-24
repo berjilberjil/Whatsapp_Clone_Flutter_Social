@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ArchivedChat extends StatelessWidget {
-  const ArchivedChat({super.key});
+class Mychatscreen extends StatelessWidget {
+  const Mychatscreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
         child: Text(
-          "Archived Chat Screen"
+          "My Chat Screen"
         ),
       ),
     );
