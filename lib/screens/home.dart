@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:whatsin/screens/archived.dart';
-import 'package:whatsin/screens/mychatscreen.dart';
+import 'package:whatsin/screens/sample.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -104,7 +104,7 @@ class HomeScreen extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Get.to(const Mychatscreen());
+                  Get.to( const PhoneNumberScreen());
                 },
                 child: const Padding(
                   padding: EdgeInsets.symmetric(vertical: 10),

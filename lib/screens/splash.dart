@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:whatsin/screens/phoneno.dart';
 
-
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
@@ -12,7 +11,7 @@ class SplashScreen extends StatelessWidget {
       backgroundColor: const Color(0xFF07141C),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 120),
@@ -26,50 +25,62 @@ class SplashScreen extends StatelessWidget {
               "Welcome to WhatsApp",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 25,
                   fontWeight: FontWeight.w400),
             ),
             const SizedBox(height: 15),
             Center(
-              child: RichText(
-                text: const TextSpan(
-                  children: [
-                    TextSpan(
-                      text: "Read our ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w300),
-                    ),
-                    TextSpan(
-                      text: "Privacy Policy",
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 0, 255, 255),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w300),
-                    ),
-                    TextSpan(
-                      text: ". ",
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w300),
-                    ),
-                    TextSpan(
-                      text: 'Tap "Agree and continue" to accept the \n',
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w300),
-                    ),
-                    TextSpan(
-                      text: "Terms of Service",
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 0, 255, 255),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w300),
-                    ),
-                  ],
+              child: Center(
+                
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  text: const TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "Read our ",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      TextSpan(
+                        text: "Privacy Policy",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 0, 255, 255),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w300),
+                      ),
+                      TextSpan(
+                        text: ". ",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w300),
+                      ),
+                      TextSpan(
+                        text: 'Tap "Agree and continue" to  \n',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w300),
+                      ),
+                      TextSpan(
+                        text: "accept the ",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w300),
+                      ),
+                      TextSpan(
+                        text: "Terms of Service",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 0, 255, 255),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ],
+                    
+                  ),
                 ),
               ),
             ),
@@ -100,33 +111,37 @@ class SplashScreen extends StatelessWidget {
                   color: Colors.white,
                 ),
                 SizedBox(
-                  height: 150,
+                  height: 60,
                 ),
               ],
             ),
-            const Spacer(),
-            InkWell(
-              onTap: () {
-                Get.offAll(const PhoneNumber());
-              },
-              child: Container(
-                width: double.infinity,
-                height: 40,
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 29, 158, 0),
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Agree and continue",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 13,
-                        fontWeight: FontWeight.w500),
+            Padding(
+              padding: const EdgeInsets.all(22.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(25),
+                child: Material(
+                  color: const Color.fromARGB(255, 29, 158, 0), 
+                  child: InkWell(
+                    onTap: () {
+                      Get.offAll(const PhoneNumber());
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      height: 40,
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "Agree and continue",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

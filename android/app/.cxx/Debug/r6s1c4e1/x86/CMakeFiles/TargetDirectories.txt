@@ -1,0 +1,2 @@
+/Users/berjil/Documents/Flutter Projects/whatsapp_clone_flutter/android/app/.cxx/Debug/r6s1c4e1/x86/CMakeFiles/edit_cache.dir
+/Users/berjil/Documents/Flutter Projects/whatsapp_clone_flutter/android/app/.cxx/Debug/r6s1c4e1/x86/CMakeFiles/rebuild_cache.dir
